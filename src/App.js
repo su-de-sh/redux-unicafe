@@ -1,6 +1,9 @@
+import { useDispatch } from "react-redux";
+
 const App = () => {
+  const dispatch = useDispatch();
   const good = () => {
-    store.dispatch({
+    dispatch({
       type: "GOOD",
     });
   };

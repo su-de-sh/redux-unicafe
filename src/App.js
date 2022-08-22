@@ -1,7 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 const App = () => {
   const dispatch = useDispatch();
+  const data = useSelector((state) => {
+    return state;
+  });
   const good = () => {
     dispatch({
       type: "GOOD",
@@ -14,7 +17,7 @@ const App = () => {
       <button>ok</button>
       <button>bad</button>
       <button>reset stats</button>
-      <div>good {store.getState().good}</div>
+      <div>good {data.good}</div>
       <div>ok</div>
       <div>bad</div>
     </div>

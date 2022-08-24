@@ -14,21 +14,21 @@ const App = () => {
 
   const ok = () => {
     store.dispatch({
-      type: "GOOD",
+      type: "OK",
     });
   };
   const bad = () => {
     store.dispatch({
-      type: "GOOD",
+      type: "BAD",
     });
   };
   const reset = () => {
     store.dispatch({
-      type: "GOOD",
+      type: "ZERO",
     });
   };
 
-  const data = store.getState;
+  const data = store.getState();
 
   return (
     <div>
